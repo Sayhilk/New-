@@ -1,4 +1,6 @@
 import streamlit as st
+import openai
+import os
 from ms_auth import get_token
 from process_files import fetch_and_process_files
 import openai
@@ -6,7 +8,7 @@ import openai
 st.set_page_config(page_title="AI SharePoint Agent", layout="wide")
 st.title("🔗 AI Agent for SharePoint Files")
 
-openai.api_key = st.secrets["OPENAI_API_KEY"]
+openai.api_key = os.environ["OPENAI_API_KEY"]
 
 with st.sidebar:
     st.header("🔐 Authentication")
