@@ -1,0 +1,7 @@
+streamlit
+msal
+requests
+openai
+python-docx
+openpyxl
+PyMuPDF
