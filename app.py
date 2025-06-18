@@ -35,7 +35,12 @@ if "token" in st.session_state:
         if st.button(f"Summarize {fname}"):
             res = openai.ChatCompletion.create(
                 model="gpt-4",
-                messages=[{"role": "user", "content": f"Summarize this:
-{content[:3000]}"}]
+                messages=[
+                    {
+                        "role": "user", 
+                        "content": f"Summarize this:
+{content[:3000]}"
+                    }
+                ]
             )
             st.success(res['choices'][0]['message']['content'])
